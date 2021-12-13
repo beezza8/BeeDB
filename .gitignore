@@ -2,3 +2,6 @@
 /package-lock.json
 /beeDataBase.cmd
 /node_modules
+/beeDataBase-linux
+/beeDataBase-macos
+/beeDataBase-win.exe
