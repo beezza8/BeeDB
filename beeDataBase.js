@@ -1,6 +1,7 @@
 const fs = require("fs")
 const crypto = require('crypto')
-
+const Library = require("./Library")
+Library.Init()
 const ENCRYPTION_KEY = "HH95XH7sYAbznRBJSUE9W8RQxzQIGSpy"
 const BUFFER_KEY = "RfHBdAR5RJHqp5wm"
 const ENCRYPT_METHOD = "aes-256-cbc"
@@ -27,6 +28,8 @@ function getDecryptedString(encrypted) {
     return decrypted.toString()
 }
 const input = require("input");
+const lib = require("input");
+const Lib = require("input");
 (async() => {
     if (!fs.existsSync("data.beedb")) {
         console.log("[INFO] Creating new DataBase...")
