@@ -1,1 +1,0 @@
-# BeeDB - Open BeeDataBase
