@@ -91,4 +91,3 @@ const input = require("input");
         }
     }
 })()
-
