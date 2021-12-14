@@ -28,8 +28,7 @@ function getDecryptedString(encrypted) {
     return decrypted.toString()
 }
 const input = require("input");
-const lib = require("input");
-const Lib = require("input");
+
 (async() => {
     if (!fs.existsSync("data.beedb")) {
         console.log("[INFO] Creating new DataBase...")
