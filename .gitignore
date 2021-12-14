@@ -5,3 +5,5 @@
 /beeDataBase-linux
 /beeDataBase-macos
 /beeDataBase-win.exe
+*.beedb
+*.password
