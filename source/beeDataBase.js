@@ -41,7 +41,7 @@ const input = require("input");
     }
 
     let db
-    const packageJson = require("./package.json")
+    const packageJson = require("../package.json")
     const encryptedUserPassword = fs.readFileSync("data.beedb.password", "utf8")
     console.log(`
     ###############################################################################
