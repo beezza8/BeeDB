@@ -55,8 +55,8 @@ const input = require("input");
     if (inputPassword != UserPassword) {
         console.log("password incorrect")
         console.log("Auto logout for 3 seconds...")
-        fs.unlinkSync("BeeDB.Library.cache")
-        console.log("cache removed")
+        fs.unlinkSync("BeeDB.Library.temp")
+        console.log("Temp file removed")
         setTimeout(() => {
             process.exit(0)
         }, 3000)
@@ -64,6 +64,7 @@ const input = require("input");
         console.log("password matches")
     }
     while (true) {
+        const cache = Library.CacheLoader()
         try {
             db = fs.readFileSync("data.beedb", "utf-8")
         }catch (err) {
@@ -78,8 +79,8 @@ const input = require("input");
             const InsertData = await input.text("Insert Data :")
             fs.appendFileSync("data.beedb", InsertData + ";")
         }else if (cmd === "EXIT") {
-            console.log("Removing Cache...")
-            fs.unlinkSync("BeeDB.Library.cache")
+            console.log("Temp file Cache...")
+            fs.unlinkSync("BeeDB.Library.temp")
             console.log("Logout Successes")
             break
         }else if (cmd === "READ") {
