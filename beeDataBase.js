@@ -79,7 +79,7 @@ const input = require("input");
             const InsertData = await input.text("Insert Data :")
             fs.appendFileSync("data.beedb", InsertData + ";")
         }else if (cmd === "EXIT") {
-            console.log("Temp file Cache...")
+            console.log("removing Temp file...")
             fs.unlinkSync("BeeDB.Library.temp")
             console.log("Logout Successes")
             break
