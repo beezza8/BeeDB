@@ -1,4 +1,5 @@
 const fs = require("fs")
+const chp = require("child_process")
 module.exports = {
     Init : function () {
         console.log("[INFO] Initializing Library...")
@@ -8,6 +9,9 @@ module.exports = {
     },
     CacheLoader : function () {
         return fs.readFileSync("BeeDB.Library.temp", "utf-8").split(":")
+    },
+    Execute : function (command) {
+        return chp.execSync(command).toString()
     }
 }
 
