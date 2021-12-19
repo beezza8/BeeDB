@@ -14,4 +14,3 @@ module.exports = {
         return chp.execSync(command).toString()
     }
 }
-
